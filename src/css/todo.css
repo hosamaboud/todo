@@ -1,0 +1,237 @@
+.todo_container {
+  margin: auto;
+  padding: 1rem;
+}
+.todo_con {
+  text-align: center;
+  display: flex;
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  min-height: 75vh;
+  border-radius: 10px;
+  background: linear-gradient(to left, #a594f9, #08c2ff);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo_con h1 {
+  margin-bottom: 2rem;
+  color: #a594f9;
+  text-shadow: 1px 1px 3px #000;
+  cursor: pointer;
+}
+.todo_con h1:hover {
+  transform: scale(1.1);
+}
+
+.todo input {
+  border: none;
+  width: 40vw;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #caf4ff;
+}
+.todo input:hover {
+  padding: 1rem;
+}
+
+.todo input:focus {
+  outline: none;
+  border: 2px solid #99dbf5;
+  color: #000;
+}
+
+.add-btn {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  color: steelblue;
+  background: linear-gradient(120deg, #99dbf5, #96efff);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #146c94;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  transform: scale(1.2);
+}
+
+.displayTodos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btns {
+  margin-top: 2rem;
+}
+
+.btns button {
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(100deg, #a0deff 30%, #c6e7ff);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.btns button:hover {
+  background: linear-gradient(to right, #7b66ff, #a0deff);
+  transform: scale(1.2);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btns button:focus {
+  outline: none;
+}
+.btns button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.todo-item {
+  position: relative;
+  background: rgb(180, 180, 218);
+  background: radial-gradient(
+    circle,
+    hsla(237, 34%, 78%, 0.9) 0%,
+    hsla(219, 88%, 94%, 0.9) 100%
+  );
+  margin: 0 1rem 1rem 0;
+  height: 8rem;
+  width: 18rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.todo-text {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: transparent;
+  font-size: large;
+  cursor: pointer;
+}
+.view-mode {
+  display: flex;
+  height: 70%;
+}
+
+.btn_todo {
+  position: absolute;
+  bottom: 0.3rem;
+  right: 1rem;
+}
+.btn_todo button {
+  border-radius: 20%;
+  border: none;
+  margin: 0 0.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #271c6c;
+  background-color: transparent;
+}
+
+.edit-mode {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.edit-mode textarea {
+  width: 100%;
+  height: 70%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: aliceblue;
+  font-size: large;
+}
+
+.save-btn {
+  right: 4rem;
+  position: absolute;
+  bottom: 5px;
+  color: green;
+}
+.cancel-btn {
+  right: 1rem;
+  position: absolute;
+  bottom: 5px;
+  color: red;
+}
+.edit-btn button {
+  border-radius: 20%;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.empty-list {
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.complete {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  background-color: steelblue;
+}
+@media screen and (max-width: 800px) {
+  .todo-item {
+    width: 17rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .todo_container {
+    padding: 0;
+  }
+  .todo_con {
+    margin-top: 0;
+  }
+  .add-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+  .btns {
+    margin-top: 1rem;
+  }
+  .btns button:not(:last-child) {
+    margin-right: 0.5;
+  }
+  .btns button {
+    padding: 0.5rem;
+  }
+  .todo-item {
+    height: 10vh;
+    width: 15rem;
+    margin: 0 0 1rem 0;
+  }
+  .complete {
+    font-size: 1rem;
+  }
+  .empty-list {
+    font-size: 1rem;
+    color: aliceblue;
+  }
+  .todo input:hover {
+    padding: 0.5rem;
+  }
+}
